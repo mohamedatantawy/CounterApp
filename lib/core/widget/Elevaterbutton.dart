@@ -1,4 +1,3 @@
-
 import 'package:counterapp2/core/constant/constant.dart';
 import 'package:counterapp2/core/util/styles.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +9,7 @@ class CustomElevaterbutton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed:onpressed,
+      onPressed: onpressed,
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
@@ -23,7 +22,7 @@ class CustomElevaterbutton extends StatelessWidget {
       ),
       child: Text(
         name,
-        style: Styles.font18,
+        style: Styles.font18.copyWith(color: Colors.black),
       ),
     );
   }

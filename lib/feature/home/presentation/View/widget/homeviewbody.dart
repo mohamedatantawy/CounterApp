@@ -1,4 +1,3 @@
-
 import 'package:counterapp2/core/widget/Elevaterbutton.dart';
 import 'package:counterapp2/feature/home/presentation/View/widget/customcolumnteamA.dart';
 import 'package:counterapp2/feature/home/presentation/View/widget/custometeamB.dart';
@@ -7,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Homeviewbody extends StatefulWidget {
-  const Homeviewbody({super.key});
-
+  const Homeviewbody({super.key, required this.themed});
+  final bool themed;
   @override
   State<Homeviewbody> createState() => _HomeviewbodyState();
 }

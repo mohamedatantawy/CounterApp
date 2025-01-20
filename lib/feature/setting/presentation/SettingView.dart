@@ -1,14 +1,23 @@
+import 'package:counterapp2/config/theme/cubit/theme_cubit.dart';
 import 'package:counterapp2/core/constant/constant.dart';
 import 'package:counterapp2/core/util/styles.dart';
 import 'package:counterapp2/feature/setting/presentation/View/widget/settingbody.dart';
 import 'package:flutter/material.dart';
 
-class Settingview extends StatelessWidget {
-  const Settingview({super.key});
+class Settingview extends StatefulWidget {
+  const Settingview({super.key, required this.themed});
+  final bool themed;
 
+  @override
+  State<Settingview> createState() => _SettingviewState();
+}
+
+class _SettingviewState extends State<Settingview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:widget.themed ? Colors.blue[900] : Colors.white,
+      
       appBar: AppBar(
         backgroundColor: kpirameycolor,
         elevation: 0,
@@ -18,7 +27,9 @@ class Settingview extends StatelessWidget {
           style: Styles.font30,
         ),
       ),
-      body:const Settingbody(),
+      body: Settingbody(
+        themed: widget.themed,
+      ),
     );
   }
 }
